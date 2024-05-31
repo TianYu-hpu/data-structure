@@ -3,18 +3,18 @@ package com.htjs.datastructure.sort;
 /**
  * 选择排序
  */
-public class SelectionSort {
+public class InsertionSort {
 
     public static void sort(Comparable[]  a) {
-        for(int i = 0; i < a.length; i++) {
-            //锁定最小元素，让该元素和后面的元素比较，找出小元素index赋值给minIndex
-            int minIndex = i;
-            for(int j = i + 1;  j < a.length; j++) {
-                if(greater(a[minIndex], a[j])) {
-                    minIndex = j;
+        for(int i = 1; i < a.length; i++) {
+            //拿当前元素a[i]和数组中从后往前面的元素相比较，找到一个小于等于a[i]的元素
+            for(int j = i;  j > 0; j--) {
+                if(greater(a[j - 1], a[j])) {
+                    exchange(a, j - 1, j);
+                } else  {
+                    break;
                 }
             }
-            exchange(a,  i, minIndex);
         }
     }
 
