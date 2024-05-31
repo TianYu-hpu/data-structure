@@ -12,6 +12,7 @@ public class InsertionSort {
                 if(greater(a[j - 1], a[j])) {
                     exchange(a, j - 1, j);
                 } else  {
+                    //说明插入的元素必现有已经排好序的元素大，直接退出，进入下一个循环
                     break;
                 }
             }
