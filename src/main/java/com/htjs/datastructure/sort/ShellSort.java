@@ -12,9 +12,12 @@ public class ShellSort {
             h = 2 * h + 1;
         }
         while(h >= 1) {
+            //找到待插入的元素
             for (int i = h; i < a.length; i++) {
-                //拿当前元素a[i]和数组中从后往前面的元素相比较，找到一个小于等于a[i]的元素
+                //a[i]就是待插入的元素
+                //把a[i]插入到a[i-h],a[i-2h],a[i-3h]....序列中
                 for (int j = i; j >= h; j -= h) {
+                    //a[j]就是待插入的元素，依次和a[j-h],a[j-2h],a[j-3h]....进行比较,如果a[j]小，那么交换位置，如果不小于结束循环
                     if (greater(a[j - h], a[j])) {
                         exchange(a, j - h, j);
                     } else {
