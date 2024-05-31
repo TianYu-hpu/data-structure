@@ -98,3 +98,8 @@ fabric.properties
 
 target/generated-sources/
 target/generated-test-sources/
+.idea/compiler.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+src/main/resources/
