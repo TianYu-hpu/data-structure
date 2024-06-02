@@ -1,7 +1,7 @@
 package com.htjs.datastructure.sort;
 
 /**
- * 希尔排序
+ * 快速排序
  */
 public class QuickSort {
 
@@ -64,6 +64,7 @@ public class QuickSort {
         }
         //交换最后right所引出和基准值所在的所引出的值
         exchange(a, lo, right);
+        //right就是切分的界限
         return right;
     }
 

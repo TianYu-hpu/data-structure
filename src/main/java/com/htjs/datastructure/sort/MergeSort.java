@@ -1,7 +1,7 @@
 package com.htjs.datastructure.sort;
 
 /**
- * 希尔排序
+ * 归并排序
  */
 public class MergeSort {
 
