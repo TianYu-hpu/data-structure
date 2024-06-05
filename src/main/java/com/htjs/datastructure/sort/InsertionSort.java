@@ -1,7 +1,7 @@
 package com.htjs.datastructure.sort;
 
 /**
- * 插入排序
+ * 插入排序（稳定排序）
  */
 public class InsertionSort {
 

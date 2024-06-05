@@ -1,7 +1,7 @@
 package com.htjs.datastructure.sort;
 
 /**
- * 希尔排序
+ * 希尔排序（不稳定排序）
  */
 public class ShellSort {
 

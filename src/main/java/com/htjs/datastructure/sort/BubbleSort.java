@@ -1,7 +1,7 @@
 package com.htjs.datastructure.sort;
 
 /**
- * 冒泡排序
+ * 冒泡排序（稳定排序）
  */
 public class BubbleSort {
 

@@ -1,7 +1,7 @@
 package com.htjs.datastructure.sort;
 
 /**
- * 快速排序
+ * 快速排序（不稳定排序）
  */
 public class QuickSort {
 
@@ -30,7 +30,7 @@ public class QuickSort {
     }
 
     /**
-     * 对数组a中，从索引lo到索引hi之间的元素进行分组，病返回分组界限对应的索引
+     * 对数组a中，从索引lo到索引hi之间的元素进行分组，并返回分组界限对应的索引
      * @param a
      * @param lo
      * @param hi

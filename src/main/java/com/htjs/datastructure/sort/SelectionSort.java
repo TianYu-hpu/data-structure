@@ -1,7 +1,7 @@
 package com.htjs.datastructure.sort;
 
 /**
- * 选择排序
+ * 选择排序（不稳定排序）
  */
 public class SelectionSort {
 
