@@ -40,7 +40,7 @@ public class QuickSort {
         //把最左边的元素当做基准值
         Comparable key = a[lo];
         //定义一个左侧指针，初始指向最左边的元素
-        int left = lo;
+        int left = lo + 1;
         //定义一个右侧指针，初始指向右侧元素的下一个位置
         int right = hi + 1;
         while(true) {
@@ -51,7 +51,7 @@ public class QuickSort {
                 }
             }
             //先从左往右扫描，找到一个比基准元素值大的元素
-            while(less(++left, key)) {
+            while(less(left++, key)) {
                 if(left == hi) {
                     break;
                 }
