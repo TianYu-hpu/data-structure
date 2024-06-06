@@ -30,6 +30,7 @@ public class Queue<T> implements Iterable<T> {
             Node oldLast = last;
             Node newNode = new Node(t, null);
             oldLast.next = newNode;
+            last = newNode;
         }
         N++;
     }
