@@ -32,7 +32,8 @@ public class SlowFastEntrancePointer {
     }
 
     /**
-     * 判断入口 牵扯到数论知识，这块不动，先这样写，记住就行
+     * 判断入口 牵扯到数论知识
+     * https://zhuanlan.zhihu.com/p/454262200
      * @param curr
      * @return
      */
