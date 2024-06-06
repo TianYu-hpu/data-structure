@@ -86,6 +86,27 @@ public class LinkList<T> implements Iterable {
         return -1;
     }
 
+    public void reverse() {
+        if(N == 0) {
+            return;
+        }
+        reverse(head.next);
+    }
+
+    private Node reverse(Node curr) {
+        if(curr.next == null) {
+            //反转后，头结点指向链表的最后一个节点
+            head.next = curr;
+            return curr;
+        }
+        //当前节点的上一个节点
+        Node pre = reverse(curr.next);
+        pre.next = curr;
+        //当前节点的下一个节点设为null
+        curr.next = null;
+        return curr;
+    }
+
 
     public Iterator iterator() {
         return new LIterator();
