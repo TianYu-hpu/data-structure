@@ -139,8 +139,5 @@ public class LinkList<T> implements Iterable {
             return (T) n.item;
         }
 
-        public void remove() {
-
-        }
     }
 }

@@ -56,9 +56,6 @@ public class Stack<T> implements Iterable<T> {
             return (T) node.item;
         }
 
-        public void remove() {
-
-        }
     }
 
 

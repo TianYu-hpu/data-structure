@@ -113,8 +113,5 @@ public class SequenceList<T> implements Iterable<T> {
             return eles[index++];
         }
 
-        public void remove() {
-
-        }
     }
 }
