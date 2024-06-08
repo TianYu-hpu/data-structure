@@ -41,10 +41,10 @@ public class Queue<T> implements Iterable<T> {
         }
         Node oldFirst = head.next;
         head.next = oldFirst.next;
+        N--;
         if(isEmpty()) {
             last = null;
         }
-        N--;
         return (T) oldFirst.item;
     }
 
