@@ -1,5 +1,8 @@
 package com.htjs.datastructure.tree;
 
+
+import com.htjs.datastructure.list.Queue;
+
 /**
  * 二叉树
  * @param <Key>
@@ -121,8 +124,48 @@ public class BinaryTree<Key extends Comparable<Key>, Value> {
         return x;
     }
 
+    public Key min() {
+        return min(root).key;
+    }
+
+    private Node min(Node x) {
+        while(x.left != null) {
+            x = x.left;
+        }
+        return x;
+    }
+
+    public Key max() {
+        return max(root).key;
+    }
+
+    private Node max(Node x) {
+        while(x.right != null) {
+            x = x.right;
+        }
+        return x;
+    }
+
+
     public int size() {
         return N;
+    }
+
+    public Queue<Key> layerErgodic() {
+        Queue<Key> keys = new Queue<>();
+        Queue<Node> nodes = new Queue<Node>();
+        nodes.enqueue(root);
+        while(!nodes.isEmpty()) {
+            Node x = nodes.dequeue();
+            keys.enqueue(x.key);
+            if(x.left != null) {
+                nodes.enqueue(x.left);
+            }
+            if(x.right != null) {
+                nodes.enqueue(x.right);
+            }
+        }
+        return keys;
     }
 
 
