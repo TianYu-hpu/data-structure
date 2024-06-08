@@ -151,6 +151,10 @@ public class BinaryTree<Key extends Comparable<Key>, Value> {
         return N;
     }
 
+    /**
+     * 层序遍历
+     * @return
+     */
     public Queue<Key> layerErgodic() {
         Queue<Key> keys = new Queue<>();
         Queue<Node> nodes = new Queue<Node>();
@@ -166,6 +170,30 @@ public class BinaryTree<Key extends Comparable<Key>, Value> {
             }
         }
         return keys;
+    }
+
+    public int maxDepth() {
+        return maxDepth(root);
+    }
+
+    private int maxDepth(Node x) {
+        if(x == null) {
+            return 0;
+        }
+        int max = 0;
+        int maxL = 0;
+        int maxR = 0;
+        //计算左子树的最大深度
+        if(x.left != null) {
+            maxL = maxDepth(x.left);
+        }
+
+        //计算右子树的最大深度
+        if(x.right != null) {
+            maxL = maxDepth(x.right);
+        }
+        max = maxL > maxR ? maxL + 1 : maxR + 1;
+        return max;
     }
 
 
