@@ -55,7 +55,7 @@ public class BreadFirstSearch {
      * @return
      */
     public boolean marked(int w) {
-        return marked(w);
+        return marked[w];
     }
 
     /**
