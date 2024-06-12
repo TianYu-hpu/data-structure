@@ -45,7 +45,7 @@ public class DepthFirstSearch {
      * @return
      */
     public boolean marked(int w) {
-        return marked(w);
+        return marked[w];
     }
 
     /**
