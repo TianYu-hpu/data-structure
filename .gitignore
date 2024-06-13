@@ -97,7 +97,7 @@ fabric.properties
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
-
+target/
 target/generated-sources/
 target/generated-test-sources/
 .idea/compiler.xml
