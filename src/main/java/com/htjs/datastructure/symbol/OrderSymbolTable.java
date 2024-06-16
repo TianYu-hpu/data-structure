@@ -1,18 +1,18 @@
 package com.htjs.datastructure.symbol;
 
 /**
- * 符号表
+ * 有序符号表
  * @param <Key>
  * @param <Value>
  */
-public class SymbolTable<Key, Value> {
+public class OrderSymbolTable<Key extends Comparable<Key>, Value> {
     //记录首节点
     private Node head;
     //记录符号表中元素的个数
     private int N;
 
 
-    public SymbolTable() {
+    public OrderSymbolTable() {
         head = new Node(null, null, null);
         N = 0;
     }
@@ -27,18 +27,22 @@ public class SymbolTable<Key, Value> {
      * @param value
      */
     public void put(Key key, Value value) {
-        //先从符号表中查找键为key的键值对
-        Node n = head;
-        while(n.next != null) {
-            n = n.next;
-            if(n.key.equals(key)) {
-                n.value = value;
-            }
+        //记录当前节点
+        Node curr = head.next;
+        //记录上一个节点
+        Node pre = head;
+        //如果key大于当前节点的key,则一直寻找下一个节点
+        while(curr != null && key.compareTo(curr.key) > 0) {
+            pre = curr;
+            curr = curr.next;
+        }
+        while(curr != null && key.compareTo(curr.key) == 0) {
+            curr.value = value;
+            return;
         }
         //符号表中没有键为key的键值对
-        Node oldFirst = head.next;
-        Node newNode = new Node(key, value, oldFirst);
-        head.next = newNode;
+        Node newNode = new Node(key, value, curr);
+        pre.next = newNode;
         N++;
     }
 
