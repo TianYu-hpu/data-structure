@@ -88,20 +88,20 @@ public class MinPriorityQueue<T extends Comparable<T>> {
     private void sink(int k) {
         while(2 * k <= N) {
             //找到子节点中的较大者
-            int max = 2 * k;
+            int min = 2 * k;
             if(2 * k + 1 <= N) {
                 //存在右子节点
                 if(greater(2 * k, 2 * k + 1)) {
-                    max = 2 * k + 1;
+                    min = 2 * k + 1;
                 }
             }
             //比较当前节点和子节点中的较大者，如果当前节点不小，则结束循环
-            if(!greater(k, max)) {
+            if(!greater(k, min)) {
                 break;
             }
             //当前节点小，则交换
-            exch(k, max);
-            k = max;
+            exch(k, min);
+            k = min;
         }
     }
 
