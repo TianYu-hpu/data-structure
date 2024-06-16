@@ -93,7 +93,11 @@ public class MinPriorityQueue<T extends Comparable<T>> {
                 //存在右子节点
                 if(greater(2 * k, 2 * k + 1)) {
                     min = 2 * k + 1;
+                } else {
+                    min = 2 * k;
                 }
+            } else {
+                min = 2 * k;
             }
             //比较当前节点和子节点中的较大者，如果当前节点不小，则结束循环
             if(!greater(k, min)) {
