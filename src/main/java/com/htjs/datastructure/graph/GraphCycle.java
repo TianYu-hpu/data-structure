@@ -3,7 +3,7 @@ package com.htjs.datastructure.graph;
 /**
  * 判断有向图是否有环
  */
-public class DirectedCycle {
+public class GraphCycle {
 
     //索引代表顶点，值表示当前顶点已经被搜索
     private boolean[] marked;
@@ -12,7 +12,7 @@ public class DirectedCycle {
     //索引代表顶点，用栈的思想，记录当前顶点有没有已经处在正在搜索的有向路径上
     private boolean[] onStack;
 
-    public DirectedCycle(Digraph G) {
+    public GraphCycle(Graph G) {
         this.marked = new boolean[G.V()];
         this.hasCycle = false;
         this.onStack = new boolean[G.V()];
@@ -28,7 +28,7 @@ public class DirectedCycle {
      * @param G
      * @param v
      */
-    private void dfs(Digraph G, int v) {
+    private void dfs(Graph G, int v) {
         //把当前顶点标记为已搜索
         marked[v] = true;
         //让当前顶点进栈

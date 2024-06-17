@@ -24,8 +24,8 @@ public class DirectedCircleTest {
             int q = Integer.parseInt(line.split(" ")[1]);
             G.addEdge(p, q);
         }
-        DirectedCycle directedCycle = new DirectedCycle(G);
-        System.out.println(directedCycle.hasCycle());
+        GraphCycle graphCycle = new GraphCycle(G);
+        System.out.println(graphCycle.hasCycle());
     }
 
 }
