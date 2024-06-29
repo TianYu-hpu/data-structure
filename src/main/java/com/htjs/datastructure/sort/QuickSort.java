@@ -53,20 +53,25 @@ public class QuickSort {
         int right = hi + 1;
         while(true) {
             //先从右往左扫描，找到一个比基准元素值小的元素
+            //循环停止，证明找到了一个比基准值小的元素
             while(less(key, a[--right])) {
                 if(right == lo) {
+                    //交换left和right索引处的元素
                     break;
                 }
             }
             //先从左往右扫描，找到一个比基准元素值大的元素
+            //循环停止，证明找到了一个比基准值大的元素
             while(less(left++, key)) {
                 if(left == hi) {
                     break;
                 }
             }
             if(left >= right) {
+                //扫描完了所有元素，结束循环
                 break;
             } else {
+                //交换left和right索引处的元素
                 exchange(a, left, right);
             }
         }
