@@ -9,11 +9,11 @@ package com.htjs.datastructure.sort;
 public class BubbleSort {
 
     public static void sort(Comparable[]  a) {
-        for(int i = a.length -  1; i > 0; i--) {
+        for(int i = a.length - 1; i > 0; i--) {
             for(int j = 0; j < i; j++) {
                 //如果前一个元素比后一个元素大，交换这两个元素
                 if(greater(a[j], a[j+1])) {
-                    exchange(a,  j, j + 1);
+                    exchange(a, j, j + 1);
                 }
             }
         }
