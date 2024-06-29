@@ -12,10 +12,10 @@ public class MergeSort {
     private static Comparable[] assist;
 
     public static void sort(Comparable[]  a) {
-       assist = new Comparable[a.length];
-       int lo = 0;
-       int hi = a.length - 1;
-       sort(a, lo, hi);
+        assist = new Comparable[a.length];
+        int low = 0;
+        int high = a.length - 1;
+        sort(a, low, high);
     }
 
     /**
@@ -29,7 +29,7 @@ public class MergeSort {
             return;
         }
         int mid = (lo + hi) / 2;
-        sort(a, lo, mid);
+        sort(a , lo, mid);
         sort(a, mid + 1, hi);
         merge(a, lo, mid, hi);
     }
@@ -55,7 +55,6 @@ public class MergeSort {
         while(p2 <= hi) {
             assist[i++] = a[p2++];
         }
-
         for(int index = lo; index <= hi; index++) {
             a[index] = assist[index];
         }
