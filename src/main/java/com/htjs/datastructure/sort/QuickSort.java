@@ -14,6 +14,12 @@ public class QuickSort {
 
     // 划分函数，选择一个基准元素，将小于基准的元素放在左边，大于基准的元素放在右边
     public static int partition(Integer[] arr, int low, int high) {
+        /**
+         * 选择数组的最后一个元素作为基准（pivot）。
+         * 初始化一个变量 i 为 low - 1。
+         * 遍历从 low 到 high - 1 的元素，如果当前元素小于或等于基准，就将 i 加 1 并交换 arr[i] 和 arr[j] 的位置。
+         * 最后将基准元素与 i + 1 位置的元素交换，返回基准元素的最终位置 pi
+         */
         int pivot = arr[high];
         int i = (low - 1);
 
@@ -22,6 +28,7 @@ public class QuickSort {
                 i++;
                 swap(arr, i, j);
             }
+            System.out.println(Arrays.toString(arr));
         }
         swap(arr, i + 1, high);
         return (i + 1);
