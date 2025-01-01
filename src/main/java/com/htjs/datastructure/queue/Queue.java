@@ -1,4 +1,4 @@
-package com.htjs.datastructure.list;
+package com.htjs.datastructure.queue;
 
 import java.util.Iterator;
 

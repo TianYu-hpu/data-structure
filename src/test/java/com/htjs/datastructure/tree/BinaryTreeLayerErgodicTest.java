@@ -1,6 +1,6 @@
 package com.htjs.datastructure.tree;
 
-import com.htjs.datastructure.list.Queue;
+import com.htjs.datastructure.queue.Queue;
 
 public class BinaryTreeLayerErgodicTest {
 

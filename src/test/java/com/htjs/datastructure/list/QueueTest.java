@@ -1,5 +1,7 @@
 package com.htjs.datastructure.list;
 
+import com.htjs.datastructure.queue.Queue;
+
 public class QueueTest {
 
     public static void main(String[] args) {

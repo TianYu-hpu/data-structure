@@ -1,6 +1,6 @@
 package com.htjs.datastructure.graph;
 
-import com.htjs.datastructure.list.Queue;
+import com.htjs.datastructure.queue.Queue;
 
 /**
  * 有向图

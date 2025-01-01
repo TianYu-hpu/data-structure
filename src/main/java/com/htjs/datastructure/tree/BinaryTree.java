@@ -1,7 +1,7 @@
 package com.htjs.datastructure.tree;
 
 
-import com.htjs.datastructure.list.Queue;
+import com.htjs.datastructure.queue.Queue;
 
 /**
  * 二叉树
