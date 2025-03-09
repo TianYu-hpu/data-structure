@@ -20,18 +20,17 @@ public class QuickSort {
          * 遍历从 low 到 high - 1 的元素，如果当前元素小于或等于基准，就将 i 加 1 并交换 arr[i] 和 arr[j] 的位置。
          * 最后将基准元素与 i + 1 位置的元素交换，返回基准元素的最终位置 pi
          */
-        int pivot = arr[high];
-        int i = (low - 1);
-
-        for (int j = low; j <= high - 1; j++) {
-            if (arr[j] <= pivot) {
-                i++;
-                swap(arr, i, j);
-            }
-            System.out.println(Arrays.toString(arr));
+        int pivot = arr[low];  // 选择第一个元素作为基准‌:ml-citation{ref="4,5" data="citationList"}
+        int i = low, j = high;
+        while (i < j) {
+            // 右指针向左找小于基准的值‌:ml-citation{ref="5" data="citationList"}
+            while (i < j && arr[j] >= pivot) j--;
+            // 左指针向右找大于基准的值‌:ml-citation{ref="5" data="citationList"}
+            while (i < j && arr[i] <= pivot) i++;
+            if (i < j) swap(arr, i, j); // 交换不符合条件的元素‌:ml-citation{ref="4,6" data="citationList"}
         }
-        swap(arr, i + 1, high);
-        return (i + 1);
+        swap(arr, low, i); // 将基准值放到正确位置‌:ml-citation{ref="4" data="citationList"}
+        return i;
     }
 
     // 快速排序的主函数
